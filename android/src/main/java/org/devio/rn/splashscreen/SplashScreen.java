@@ -31,6 +31,7 @@ public class SplashScreen {
     activity.runOnUiThread(new Runnable() {
       @Override
       public void run() {
+        System.out.println("runnnn");
         if (!activity.isFinishing()) {
           mSplashDialog = new Dialog(activity, themeResId);
           mSplashDialog.setContentView(R.layout.launch_screen);

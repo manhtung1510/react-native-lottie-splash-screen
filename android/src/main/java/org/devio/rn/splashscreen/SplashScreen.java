@@ -35,25 +35,25 @@ public class SplashScreen {
           mSplashDialog = new Dialog(activity, themeResId);
           mSplashDialog.setContentView(R.layout.launch_screen);
           mSplashDialog.setCancelable(false);
-          LottieAnimationView lottie = (LottieAnimationView) mSplashDialog.findViewById(lottieId);
+          // LottieAnimationView lottie = (LottieAnimationView) mSplashDialog.findViewById(lottieId);
 
-          lottie.addAnimatorListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-              System.out.println("asdf");
-            }
+          // lottie.addAnimatorListener(new Animator.AnimatorListener() {
+          //   @Override
+          //   public void onAnimationStart(Animator animation) {
+          //     System.out.println("asdf");
+          //   }
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
-              SplashScreen.setAnimationFinished(true);
-            }
+          //   @Override
+          //   public void onAnimationEnd(Animator animation) {
+          //     SplashScreen.setAnimationFinished(true);
+          //   }
 
-            @Override
-            public void onAnimationCancel(Animator animation) {}
+          //   @Override
+          //   public void onAnimationCancel(Animator animation) {}
 
-            @Override
-            public void onAnimationRepeat(Animator animation) {}
-          });
+          //   @Override
+          //   public void onAnimationRepeat(Animator animation) {}
+          // });
 
           if (!mSplashDialog.isShowing()) {
             mSplashDialog.show();

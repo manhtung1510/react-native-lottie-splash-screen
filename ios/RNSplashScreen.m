@@ -30,10 +30,8 @@ RCT_EXPORT_MODULE(SplashScreen)
     addedJsLoadErrorObserver = true;
   }
 
-  while (waiting) {
-    NSDate* later = [NSDate dateWithTimeIntervalSinceNow:0.1];
-    [[NSRunLoop mainRunLoop] runUntilDate:later];
-  }
+    UIView *rootView = [[[[[UIApplication sharedApplication] delegate] window] rootViewController] view];
+    [self showSplash:@"Splash" inRootView:rootView];
 }
 
 + (void)showSplash:(NSString*)splashScreen inRootView:(UIView*)rootView {
